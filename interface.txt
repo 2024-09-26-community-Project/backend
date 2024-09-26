@@ -1,0 +1,58 @@
+signIn (로그인)
+
+- request
+{
+    이메일 주소 : 문자열,
+    비밀번호 : 문자열
+}
+
+- response
+
+성공
+{
+    Code : "SU"
+    message : "Success"
+}
+
+실패
+{
+    Code: "SF"
+    messgage : "sign fail"
+}
+================================================================
+
+signUp (회원가입)
+
+weeklyTop3List (주간 상위 3위 게시물)
+
+currentList (최신 게시물)
+
+popularWorldList (인기 검색어)
+
+searchList (검색 게시물 리스트)
+
+relativeWordList (관련 검색어)
+
+boardDetail (게시물 상세보기)
+
+favoriteList (좋아요 리스트)
+
+favorite (좋아요 기능)
+
+commentList (댓글 리스트)
+
+postComment (댓글 쓰기)
+
+boardDelete (게시물 삭제)
+
+boardWrite (게시물 쓰기)
+
+boardUpdate (게시물 수정)
+
+getUser (유저 정보 불러오기)
+
+userBoardList (특정 유저 리스트)
+
+fileUpload (파일 업로드)
+
+getFile (파일 불러오기)
