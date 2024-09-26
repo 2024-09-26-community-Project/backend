@@ -2,28 +2,114 @@ signIn (로그인)
 
 - request
 {
-    이메일 주소 : 문자열,
-    비밀번호 : 문자열
+    *Email : String,
+    *Password : String
 }
 
 - response 
+
 성공
+Http status -200 (Success)
 {
-    Code : "SU"
+    code : "SU"
     message : "Success"
+    token : "jwt...",
+    expiredDate:123456789
 }
 
 실패
+Http Status - 401 (Unauthorized)
 {
-    Code: "SF"
-    messgage : "sign fail"
+    code: "SF"
+    messgage : "sign in faild"
+}
+
+Http Status - 500 (Internal Server Error)
+{
+    code: "DE",
+    message: "Database Error"
 }
 ================================================================
 
 signUp (회원가입)
 
+- request
+{
+    *Email:String,
+    *Password:String,
+    *nickname:String,
+    *telNumber:String,
+    *address:String,
+    addressDeail:string
+}
+
+- response
+
+성공
+ 
+Http status -200 (Success)
+{
+    code : "SU"
+    message : "Success"
+}
+
+실패
+
+- 필수정보 미입력 / 이메일 포멧 불일치 / 비밀번호 8자리 이하 / 전화번호 포멧 불일치 /
+
+-이메일 중복
+Http Status - 400 (Bad Request)
+{
+    code: "EE",
+    "message: Exist Email"
+}
+
+-데이터베이스 에러
+Http Status - 500 (Internal Server Error)
+{
+    code: "DE",
+    message: "Database Error" 
+}
+
+================================================================
+
+
 weeklyTop3List (주간 상위 3위 게시물)
 
+- request (x)
+
+- respose 
+
+성공
+
+Http status -200 (Success)
+{
+    code : "SU"
+    message : "Success"
+    top3List: boardListItem[]
+}
+
+BoardListItem
+{
+    boardNumber: int,
+    title: string,
+    content: string,
+    favoriteCount: int,
+    commentCount: int,
+    viewCount: int,
+    writeDateTime: String,
+    writerNickName: String,
+    writerProfileImage: String
+}
+
+실패
+ 
+-데이터베이스 에러
+Http Status - 500 (Internal Server Error)
+{
+    code: "DE",
+    message: "Database Error" 
+}
 currentList (최신 게시물)
 
 popularWorldList (인기 검색어)
