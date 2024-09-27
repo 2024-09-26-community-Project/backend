@@ -46,7 +46,7 @@ signUp (회원가입)
 - response
 
 성공
- 
+
 Http status -200 (Success)
 {
     code : "SU"
@@ -70,9 +70,7 @@ Http Status - 500 (Internal Server Error)
     code: "DE",
     message: "Database Error" 
 }
-
 ================================================================
-
 
 weeklyTop3List (주간 상위 3위 게시물)
 
@@ -110,11 +108,90 @@ Http Status - 500 (Internal Server Error)
     code: "DE",
     message: "Database Error" 
 }
-currentList (최신 게시물)
+================================================================
 
-popularWorldList (인기 검색어)
+popularWorldList (인기 검색어 리스트)
+
+- response 
+
+성공
+
+Http Status - 200 (OK)
+{
+    code: "SU",
+    message: "Success.",
+    popularWordList : BoardListItem[]
+}
+
+실패
+
+Http Status - 500 
+{
+    code: "DE",
+    message: "Database Error"
+}
+
+================================================================
 
 searchList (검색 게시물 리스트)
+
+- response 
+
+성공
+
+Http Status - 200 (OK)
+{
+    code: "SU",
+    message: "Success.",
+    searchList : BoardListItem[]
+}
+
+실패
+
+Http Status - 500 
+{
+    code: "DE",
+    message: "Database Error"
+}
+
+================================================================
+
+currentList (최신 게시물)
+
+- request (x)
+
+- respose 
+
+성공
+
+Http status -200 (Success)
+{
+    code : "SU"
+    message : "Success"
+    currentList: boardListItem[]
+}
+
+BoardListItem
+{
+    boardNumber: int,
+    title: string,
+    content: string,
+    favoriteCount: int,
+    commentCount: int,
+    viewCount: int,
+    writeDateTime: String,
+    writerNickName: String,
+    writerProfileImage: String
+}
+
+실패
+ 
+-데이터베이스 에러
+Http Status - 500 (Internal Server Error)
+{
+    code: "DE",
+    message: "Database Error" 
+}
 
 relativeWordList (관련 검색어)
 
