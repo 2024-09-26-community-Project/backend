@@ -4,8 +4,8 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": -237.0977,
-    "scrollLeft": -494.8186,
+    "scrollTop": 0,
+    "scrollLeft": -368.152,
     "zoomLevel": 1,
     "show": 431,
     "database": 4,
@@ -977,17 +977,17 @@
         "name": "comment_number",
         "comment": "댓글 번호",
         "dataType": "INT",
-        "default": "",
+        "default": "AUTO_INCREMENT",
         "options": 10,
         "ui": {
           "keys": 1,
           "widthName": 99,
           "widthComment": 60,
           "widthDataType": 60,
-          "widthDefault": 60
+          "widthDefault": 102
         },
         "meta": {
-          "updateAt": 1727788717377,
+          "updateAt": 1727874212370,
           "createAt": 1727788692409
         }
       },
@@ -1602,7 +1602,7 @@
           "columnIds": [
             "NIlZeq9Sy2CoHNpmqVAr7"
           ],
-          "x": 846.6,
+          "x": 888.6,
           "y": 136.3457,
           "direction": 2
         },
@@ -2194,7 +2194,8 @@
         "name": 1727788699053,
         "dataType": 1727788701575,
         "comment": 1727788713937,
-        "options(primaryKey)": 1727788717375
+        "options(primaryKey)": 1727788717375,
+        "default": 1727874212369
       }
     ],
     "s7GCmzKX_DWVWoM-v039W": [
